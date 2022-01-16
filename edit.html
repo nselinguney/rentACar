@@ -1,0 +1,185 @@
+< !DOCTYPE html>
+    <?php $con=mysqli_connect("localhost:3308", "root", "", "rentacar");
+
+$ad=$_POST['ad'];
+$soyad=$_POST['soyad'];
+$email=$_POST['email'];
+$parola=$_POST['parola'];
+$parolaTekrar=$_POST['parolaTekrar'];
+
+
+$kaydet=mysqli_query($con, "insert into bireysel_uyeler (id, ad, soyad, email, parola, parola_tekrar) values 
+(NULL, '$ad', '$soyad', '$email', '$parola', '$parolaTekrar')") or die("Hata: kayıt işlemi gerçekleşemedi.");
+?>
+    <html>
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            body {
+                margin: 0;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            .hero-image {
+                background-image: url("https://c.wallhere.com/photos/8e/a3/2011_Ferrari_599_GTB_Fiorano_netcarshow_netcar_car_images_car_photo-392581.jpg!d");
+                background-color: #cccccc;
+                top: 50px;
+                height: 700px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: relative;
+            }
+
+            .hero-text {
+                text-align: center;
+                position: absolute;
+                top: 30%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: white;
+            }
+
+            .rent-text label {
+                display: block;
+                margin: 0px 0px 15px 0px;
+            }
+
+            .rent-text input.input-field {
+                box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                border: 1px solid #C2C2C2;
+                box-shadow: 1px 1px 4px #EBEBEB;
+                -moz-box-shadow: 1px 1px 4px #EBEBEB;
+                -webkit-box-shadow: 1px 1px 4px #EBEBEB;
+                border-radius: 3px;
+                -webkit-border-radius: 3px;
+                -moz-border-radius: 3px;
+                padding: 7px;
+                outline: none;
+            }
+
+            .rent-text input[type=submit],
+            .rent-text input[type=button]:hover {
+                width: 100px;
+                height: 50px;
+                background: black;
+                color: #fff;
+            }
+
+            /*.container {
+  width:10px;
+  display:flex;
+  align-items:center;
+
+}*/
+            .topnav {
+                overflow: hidden;
+                background-color: mistyrose;
+            }
+
+            .topnav a {
+
+                float: right;
+                color: black;
+                text-align: center;
+                padding: 20px 20px;
+                text-decoration: none;
+                font-size: 25px;
+            }
+
+            .topnavnews {
+                float: right;
+            }
+
+            .topnavabout {
+                float: right;
+                overflow: hidden;
+                background-color: white;
+                color: black;
+                text-align: center;
+                text-decoration: none;
+                font-size: 50px;
+            }
+
+            .topnavkurumsal {
+                float: right;
+
+            }
+
+            .dropbtn {
+
+                background-color: DarkRed;
+                color: white;
+                padding: 16px;
+                font-size: 16px;
+                border: none;
+                cursor: pointer;
+            }
+
+            .dropdown {
+                position: relative;
+                display: inline-block;
+            }
+
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                z-index: 1;
+            }
+
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+
+            .dropdown-content a:hover {
+                background-color: #f1f1f1
+            }
+
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+
+            .button {
+                background-color: white;
+                float: right;
+                border: none;
+                color: DarkRed;
+                padding: 10px 15px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 15px;
+            }
+
+            .base {
+                background-position: center;
+                background-color: mistyrose;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="base">
+            <?php $ad=$_POST['ad'];
+    $soyad=$_POST['soyad'];
+
+    echo "Hoşgeldiniz   ".$ad;
+
+    ?>
+            <div class="hero-text">
+                <h1 style="font-size:50px">Sizin İçin En Uygun Aracı Seçin</h1>
+            </div>
+        </div>
+    </body>
+    </body>
+
+    </html>
